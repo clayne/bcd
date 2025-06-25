@@ -9,6 +9,6 @@
 #define BCD_SECTION "BACKTRACE_BCD_SB"
 
 #define BCD_CC_FORCE(M, R)	\
-	__asm__ __volatile__("" : "=m" (M) : "q" (*(R)) : "memory");
+	__asm__ __volatile__("" : "=m" (M) : "r" (*(R)) : "memory");
 
 #endif /* BCD_INTERNAL_CC_H */
